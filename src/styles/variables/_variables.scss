@@ -1,5 +1,5 @@
-:root {
-  --spacing-sm: 8px;
-  --spacing-md: 16px;
-  --spacing-lg: 32px;
-}
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use "../themes/_orange-theme" as orange-theme;
+
+$primary-color: map.get(orange-theme.$primary-palette, 70);

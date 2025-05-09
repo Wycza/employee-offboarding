@@ -1,36 +1,18 @@
+@use "./styles/base/base";
 @use "./styles/variables/variables";
+@use "./styles/components/mat-tab.scss";
 @use "./styles/themes/_orange-theme" as orange-theme;
 @use "@angular/material" as mat;
 @use 'sass:map';
 
-$primaryColor: map.get(orange-theme.$primary-palette, 70);
-
-* {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
+$onPrimaryColor: map.get(orange-theme.$primary-palette, 0);
 
 html {
   @include mat.theme((color: (primary: orange-theme.$primary-palette,
         theme-type: light),
       typography: Roboto,
       density: 0,
-    ), $overrides: (surface:$primaryColor,
-      primary: $primaryColor,
-      on-primary: #000000));
+    ), $overrides: (surface:variables.$primary-color,
+      primary: variables.$primary-color,
+      on-primary: $onPrimaryColor));
 }

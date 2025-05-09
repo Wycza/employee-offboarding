@@ -1,5 +1,5 @@
 mat-toolbar {
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: var(--box-shadow-sm);
   z-index: 2;
   position: relative;
 }
@@ -13,6 +13,7 @@ mat-toolbar {
   height: 100%;
   align-items: center;
   justify-content: center;
+  padding: var(--spacing-lg);
 }
 
 .dashboard-sidenav {
