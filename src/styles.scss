@@ -1,5 +1,6 @@
-@use "@angular/material" as mat;
+@use "./styles/variables/variables";
 @use "./styles/themes/_orange-theme" as orange-theme;
+@use "@angular/material" as mat;
 @use 'sass:map';
 
 $primaryColor: map.get(orange-theme.$primary-palette, 70);
@@ -18,6 +19,10 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 html {

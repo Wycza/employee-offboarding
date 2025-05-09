@@ -1,0 +1,8 @@
+@for(item of sidenavItems; track item.url) {
+<div class="sidenav-item">
+  <a [routerLink]="item.url" routerLinkActive="item-active" [routerLinkActiveOptions]="{exact:true}">
+    <mat-icon>{{item.icon}}</mat-icon>
+    {{item.title}}
+  </a>
+</div>
+}

@@ -1,0 +1,21 @@
+.sidenav-item {
+  margin-bottom: var(--spacing-sm);
+  border-radius: var(--spacing-sm);
+
+  a {
+    padding: var(--spacing-md);
+    border-radius: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    color: var(--mat-sys-on-background);
+
+    mat-icon {
+      margin-right: var(--spacing-sm);
+    }
+  }
+
+  &:hover,
+  .item-active {
+    background-color: var(--mat-sys-inverse-primary);
+  }
+}

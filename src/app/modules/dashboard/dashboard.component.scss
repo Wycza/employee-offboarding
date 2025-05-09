@@ -1,0 +1,20 @@
+mat-toolbar {
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.175);
+  z-index: 2;
+  position: relative;
+}
+
+.dashboard-container {
+  min-height: calc(100% - 64px);
+}
+
+.dashboard-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-sidenav {
+  padding: var(--spacing-sm);
+}

@@ -1,1 +1,15 @@
-<p>dashboard works!</p>
+<mat-toolbar>
+  <button mat-icon-button (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-drawer-container class="dashboard-container">
+  <mat-drawer #drawer class="dashboard-sidenav" mode="over">
+    <app-sidenav-list />
+  </mat-drawer>
+
+  <div class="dashboard-sidenav-content">
+    <router-outlet />
+  </div>
+</mat-drawer-container>
