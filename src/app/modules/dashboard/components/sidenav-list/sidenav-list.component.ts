@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { appUrls } from '../../../../core/consts/app-urls';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { appUrls } from '@app/core/consts/app-urls';
 
 interface SidenavItem {
   title: string;

@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OffboardingComponent } from './offboarding.component';
-import { BaseTestBedConfigModule } from '../../core/tests/base-test-bed-config-module';
+import { BaseTestBedConfigModule } from '@app/core/tests/base-test-bed-config-module';
 
 describe(OffboardingComponent.name, () => {
   let component: OffboardingComponent;

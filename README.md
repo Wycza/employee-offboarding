@@ -2,7 +2,6 @@
 
 ### TODO
 
-- [] Path imports
 - [] Provide description (Readme)
 - [] 404 page
 - [] Title service
@@ -19,3 +18,4 @@
 - [x] Create base dashboard feeling
 - [x] Add Eslint
 - [x] Prettier
+- [x] Path imports

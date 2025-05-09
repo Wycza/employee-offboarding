@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SidenavListComponent } from './sidenav-list.component';
-import { BaseTestBedConfigModule } from '../../../../core/tests/base-test-bed-config-module';
+import { BaseTestBedConfigModule } from '@app/core/tests/base-test-bed-config-module';
 import { ActivatedRoute } from '@angular/router';
 
 describe(SidenavListComponent.name, () => {

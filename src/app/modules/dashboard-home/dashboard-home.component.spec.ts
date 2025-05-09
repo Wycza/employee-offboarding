@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DashboardHomeComponent } from './dashboard-home.component';
-import { BaseTestBedConfigModule } from '../../core/tests/base-test-bed-config-module';
+import { BaseTestBedConfigModule } from '@app/core/tests/base-test-bed-config-module';
 
 describe(DashboardHomeComponent.name, () => {
   let component: DashboardHomeComponent;
