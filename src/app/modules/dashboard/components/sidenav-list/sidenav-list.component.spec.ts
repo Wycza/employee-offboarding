@@ -11,10 +11,7 @@ describe(SidenavListComponent.name, () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [SidenavListComponent],
-      providers: [
-        ...BaseTestBedConfigModule.providers,
-        { provide: ActivatedRoute, useValue: {} },
-      ],
+      providers: [...BaseTestBedConfigModule.providers, { provide: ActivatedRoute, useValue: {} }],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SidenavListComponent);

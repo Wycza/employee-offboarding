@@ -2,7 +2,6 @@
 
 ### TODO
 
-- [] Prettier
 - [] Path imports
 - [] Provide description (Readme)
 - [] 404 page
@@ -12,10 +11,11 @@
 - [] RWD
 - ... many many more
 
-
 ### Completed
+
 - [x] Add Angular Material
 - [x] Create base material theme
 - [x] Create base routing
 - [x] Create base dashboard feeling
 - [x] Add Eslint
+- [x] Prettier
