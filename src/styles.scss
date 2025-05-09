@@ -1,0 +1,31 @@
+@use "@angular/material" as mat;
+@use "./styles/themes/_orange-theme" as orange-theme;
+@use 'sass:map';
+
+$primaryColor: map.get(orange-theme.$primary-palette, 70);
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html {
+  @include mat.theme((color: (primary: orange-theme.$primary-palette,
+        theme-type: light),
+      typography: Roboto,
+      density: 0,
+    ), $overrides: (surface:$primaryColor,
+      primary: $primaryColor,
+      on-primary: #000000));
+}
