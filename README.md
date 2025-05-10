@@ -23,6 +23,7 @@ Develop an Employee Offboarding system using Angular and Google Material Design 
 - [x] Stylelint
 - [x] Table sorting
 - [x] Custom title service
+- [x] Zoneless
 
 ### TODO (If I have enough time)
 
