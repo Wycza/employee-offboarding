@@ -9,6 +9,7 @@ import { EmployeesState } from '@app/core/store/employees/employees.state';
 import { GetEmployees } from '@app/core/store/employees/employees.actions';
 import { Employee } from '@app/core/api/employees/employees.model';
 import { DepartmentType } from '@app/core/enums/department.enum';
+import { ActivatedRoute } from '@angular/router';
 
 describe(EmployeesListComponent.name, () => {
   let component: EmployeesListComponent;
@@ -35,6 +36,7 @@ describe(EmployeesListComponent.name, () => {
         ...BaseTestBedConfigModule.providers,
         provideStore([EmployeesState]),
         { provide: EmployeesApi, useValue: employeesApiMock },
+        { provide: ActivatedRoute, useValue: {} },
       ],
     }).compileComponents();
 

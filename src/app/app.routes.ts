@@ -13,6 +13,11 @@ export const routes: Routes = [
           import('./modules/dashboard-home/dashboard-home.component').then(m => m.DashboardHomeComponent),
       },
       {
+        path: `${appUrls.employee}/:id`,
+        loadComponent: () =>
+          import('./modules/employee-details/employee-details.component').then(m => m.EmployeeDetailsComponent),
+      },
+      {
         path: appUrls.offboarding,
         loadComponent: () => import('./modules/offboarding/offboarding.component').then(m => m.OffboardingComponent),
         title: 'Offboarding',

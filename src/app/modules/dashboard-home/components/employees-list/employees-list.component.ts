@@ -6,7 +6,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
+import { RouterLink } from '@angular/router';
 import { Employee } from '@app/core/api/employees/employees.model';
+import { appUrls } from '@app/core/consts/app-urls';
 import { ColDef } from '@app/core/models/table.model';
 import { EmployeesState } from '@app/core/store/employees/employees.state';
 import { EquipmentPipe } from '@app/shared/pipes/equipment/equipment-pipe';
@@ -17,7 +19,16 @@ import { select } from '@ngxs/store';
   templateUrl: './employees-list.component.html',
   styleUrl: './employees-list.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [MatTabsModule, MatTableModule, EquipmentPipe, MatIconModule, MatButtonModule, MatMenuModule, MatSortModule],
+  imports: [
+    MatTabsModule,
+    MatTableModule,
+    EquipmentPipe,
+    MatIconModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatSortModule,
+    RouterLink,
+  ],
 })
 export class EmployeesListComponent implements AfterViewInit {
   private readonly employees = select(EmployeesState.getEmployees);
@@ -31,6 +42,7 @@ export class EmployeesListComponent implements AfterViewInit {
     'action',
   ];
   protected readonly dataSource = new MatTableDataSource<Employee>([]);
+  protected readonly employeeUrl = appUrls.employee;
 
   constructor() {
     effect(() => {
@@ -40,10 +52,6 @@ export class EmployeesListComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.dataSource.sort = this.matSort();
-  }
-
-  protected openDetailsPage(employee: Employee): void {
-    console.log(employee);
   }
 
   protected startOffboarding(employee: Employee): void {

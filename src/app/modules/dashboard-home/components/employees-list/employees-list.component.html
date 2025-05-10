@@ -37,10 +37,10 @@
         </button>
 
         <mat-menu #menu="matMenu">
-          <button mat-menu-item (click)="openDetailsPage(element)">
+          <a [routerLink]="`/${employeeUrl}/${element.id}`" mat-menu-item>
             <mat-icon>face</mat-icon>
-            <span> Details </span>
-          </button>
+            <span>Details</span>
+          </a>
           <button mat-menu-item (click)="startOffboarding(element)">
             <mat-icon>door_front</mat-icon>
             <span> Offboard </span>
