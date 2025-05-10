@@ -1,6 +1,8 @@
-<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
-  <mat-tab label="Employees">Content 1</mat-tab>
-</mat-tab-group>
+<app-tab-component [searchInput]="true" (searchValueChange)="onSearchValueChange($event)">
+  <mat-tab label="Employees">
+    <app-employees-list />
+  </mat-tab>
+</app-tab-component>
 
 <ul>
   <li>Display a list of employees</li>

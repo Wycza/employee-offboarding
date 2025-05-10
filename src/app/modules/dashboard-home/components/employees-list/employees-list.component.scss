@@ -1,0 +1,12 @@
+.status-active {
+  color: var(--color-green);
+}
+
+.status-offboarded {
+  color: var(--mat-sys-error);
+}
+
+.action-wrapper {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,55 @@
+<table mat-table [dataSource]="dataSource">
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Full Name</th>
+    <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef>Email</th>
+    <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="department">
+    <th mat-header-cell *matHeaderCellDef>Department</th>
+    <td mat-cell *matCellDef="let element">{{ element.department }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="equipment">
+    <th mat-header-cell *matHeaderCellDef>Equipment</th>
+    <td mat-cell *matCellDef="let element">{{ element.equipments | equipment }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef>Status</th>
+    <td mat-cell *matCellDef="let element">
+      <span [class]="`status-${element.status.toLocaleLowerCase()}`">
+        {{ element.status }}
+      </span>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef>Action</th>
+    <td mat-cell *matCellDef="let element">
+      <div class="action-wrapper">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>menu</mat-icon>
+        </button>
+
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="openDetailsPage(element)">
+            <mat-icon>face</mat-icon>
+            <span> Details </span>
+          </button>
+          <button mat-menu-item (click)="startOffboarding(element)">
+            <mat-icon>door_front</mat-icon>
+            <span> Offboard </span>
+          </button>
+        </mat-menu>
+      </div>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
