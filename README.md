@@ -22,12 +22,12 @@ Develop an Employee Offboarding system using Angular and Google Material Design 
 - [x] Path imports
 - [x] Stylelint
 - [x] Table sorting
+- [x] Custom title service
 
 ### TODO (If I have enough time)
 
 - [] Provide description (Readme)
 - [] 404 page
-- [] Title service
 - [] Loading spinner
 - [] e2e tests
 - [] Sorting of the equipment column
