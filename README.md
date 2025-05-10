@@ -8,7 +8,7 @@ Develop an Employee Offboarding system using Angular and Google Material Design 
   - [x] Display a list of employees
   - [x] Include a search bar to filter employees by name or department. It should be done on frontend
 - Employee Details Page:
-  - [] Display detailed information about the employee (e.g., name, department, email, equipment table).
+  - [x] Display detailed information about the employee (e.g., name, department, email, equipment table).
 - Offboard action:
   - [] From the detailed page user should be able to “offboard” employees. The user should provide equipment offboarding details(employee address, optional notes, email, phone)
   - [] After confirming the action, the user should be displayed on the main list with OFFBOARDED state without site reloading, This requirement should demonstrate your state management skill. Besides that, FE should make an /offboard call to the backend.

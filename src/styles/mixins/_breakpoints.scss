@@ -1,0 +1,8 @@
+@use '../variables/breakpoints' as *;
+
+// Minimum medium devices
+@mixin md-min {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}

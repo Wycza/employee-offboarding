@@ -9,6 +9,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { RouterLink } from '@angular/router';
 import { Employee } from '@app/core/api/employees/employees.model';
 import { appUrls } from '@app/core/consts/app-urls';
+import { StatusType } from '@app/core/enums/status.enum';
 import { ColDef } from '@app/core/models/table.model';
 import { EmployeesState } from '@app/core/store/employees/employees.state';
 import { EquipmentPipe } from '@app/shared/pipes/equipment/equipment-pipe';
@@ -43,6 +44,7 @@ export class EmployeesListComponent implements AfterViewInit {
   ];
   protected readonly dataSource = new MatTableDataSource<Employee>([]);
   protected readonly employeeUrl = appUrls.employee;
+  protected readonly StatusType = StatusType;
 
   constructor() {
     effect(() => {

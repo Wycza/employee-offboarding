@@ -31,7 +31,10 @@
               }
             ],
             "styles": ["src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/styles/mixins"]
+            }
           },
           "configurations": {
             "production": {
@@ -85,7 +88,10 @@
               }
             ],
             "styles": ["src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/styles/mixins"]
+            }
           }
         },
         "lint": {

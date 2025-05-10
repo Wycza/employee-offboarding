@@ -17,7 +17,7 @@ export const routes: Routes = [
         path: `${appUrls.employee}/:id`,
         loadComponent: () =>
           import('./modules/employee-details/employee-details.component').then(m => m.EmployeeDetailsComponent),
-        resolve: { exercise: employeeResolver },
+        resolve: { employee: employeeResolver },
       },
       {
         path: appUrls.offboarding,

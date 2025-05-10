@@ -18,6 +18,18 @@ a {
   text-decoration: none;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
 :root {
   --spacing-sm: 8px;
   --spacing-md: 16px;

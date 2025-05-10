@@ -2,15 +2,30 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EmployeeDetailsComponent } from './employee-details.component';
 import { BaseTestBedConfigModule } from '@app/core/tests/base-test-bed-config-module';
+import { ActivatedRoute } from '@angular/router';
+import { Employee } from '@app/core/api/employees/employees.model';
+import { DepartmentType } from '@app/core/enums/department.enum';
+import { StatusType } from '@app/core/enums/status.enum';
 
 describe(EmployeeDetailsComponent.name, () => {
   let component: EmployeeDetailsComponent;
   let fixture: ComponentFixture<EmployeeDetailsComponent>;
 
+  const employee: Employee = {
+    id: '1',
+    department: DepartmentType.Engineering,
+    email: '',
+    name: '',
+    status: StatusType.Active,
+    equipments: [],
+  };
+
+  const activatedRouteMock = { snapshot: { data: { employee: employee } } };
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [EmployeeDetailsComponent],
-      providers: [...BaseTestBedConfigModule.providers],
+      providers: [...BaseTestBedConfigModule.providers, { provide: ActivatedRoute, useValue: activatedRouteMock }],
     }).compileComponents();
 
     fixture = TestBed.createComponent(EmployeeDetailsComponent);
