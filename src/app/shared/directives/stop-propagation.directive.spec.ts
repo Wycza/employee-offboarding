@@ -1,4 +1,4 @@
-import { Component, DebugElement } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DebugElement } from '@angular/core';
 import { StopPropagationDirective } from './stop-propagation.directive';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BaseTestBedConfigModule } from '@app/core/tests/base-test-bed-config-module';
@@ -7,6 +7,7 @@ import { By } from '@angular/platform-browser';
 @Component({
   imports: [StopPropagationDirective],
   template: `<button appStopPropagation>Click</button>`,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 class TestHostComponent {}
 

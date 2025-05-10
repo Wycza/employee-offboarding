@@ -1,0 +1,24 @@
+@use "../variables/variables";
+@use '@angular/material' as mat;
+
+:root {
+  .mat-mdc-table {
+    thead {
+      background: var(--mat-sys-surface-container-low);
+
+      th:first-of-type {
+        border-bottom-left-radius: var(--spacing-sm);
+        border-top-left-radius: var(--spacing-sm);
+      }
+
+      th:last-of-type {
+        border-bottom-right-radius: var(--spacing-sm);
+        border-top-right-radius: var(--spacing-sm);
+      }
+    }
+  }
+
+  @include mat.table-overrides((background-color: var(--mat-sys-surface-container-lowest),
+      row-item-outline-color: var(--mat-sys-inverse-on-surface),
+    ));
+}

@@ -1,10 +1,20 @@
 @use "../variables/variables";
 @use '@angular/material' as mat;
 
-html {
+:root {
   .mat-mdc-tab {
-    background-color: var(--mat-sys-surface-container-lowest);
-    padding: 0 30px;
+    padding: 0 var(--spacing-lg);
+
+    &.input-search-label {
+      cursor: default;
+      width: 250px;
+      height: 0;
+      margin-left: auto;
+    }
+
+    .input-search-wrapper {
+      width: 250px;
+    }
   }
 
   .mat-mdc-tab-labels {
@@ -17,10 +27,15 @@ html {
     padding: var(--spacing-md);
   }
 
+  .mdc-tab--active {
+    background-color: var(--mat-sys-surface-container-lowest);
+    box-shadow: var(--box-shadow-lg);
+  }
+
   @include mat.tabs-overrides((active-label-text-color: variables.$primary-color,
-      background-color: variables.$primary-color,
       inactive-hover-label-text-color: variables.$primary-color,
       active-indicator-height: 3px,
+      container-height: var(--spacing-xl),
       inactive-focus-label-text-color: variables.$primary-color,
       active-hover-label-text-color: variables.$primary-color,
       active-focus-label-text-color: variables.$primary-color,
