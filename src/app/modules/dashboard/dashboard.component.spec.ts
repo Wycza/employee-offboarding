@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard.component';
 import { SidenavListComponent } from './components/sidenav-list/sidenav-list.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BaseTestBedConfigModule } from '@app/core/tests/base-test-bed-config-module';
+import { provideStore } from '@ngxs/store';
 
 describe(DashboardComponent.name, () => {
   let component: DashboardComponent;
@@ -12,7 +13,7 @@ describe(DashboardComponent.name, () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [DashboardComponent],
-      providers: [...BaseTestBedConfigModule.providers],
+      providers: [...BaseTestBedConfigModule.providers, provideStore([])],
     })
       .overrideComponent(DashboardComponent, {
         remove: {

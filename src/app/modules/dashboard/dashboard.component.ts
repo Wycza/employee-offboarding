@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -6,6 +6,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { RouterOutlet } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SidenavListComponent } from './components/sidenav-list/sidenav-list.component';
+import { Store } from '@ngxs/store';
+import { GetEmployees } from '@app/core/store/employees/employees.actions';
 
 @Component({
   selector: 'app-dashboard',
@@ -22,4 +24,10 @@ import { SidenavListComponent } from './components/sidenav-list/sidenav-list.com
     SidenavListComponent,
   ],
 })
-export class DashboardComponent {}
+export class DashboardComponent {
+  private readonly store = inject(Store);
+
+  constructor() {
+    this.store.dispatch(new GetEmployees());
+  }
+}
