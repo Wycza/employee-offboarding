@@ -1,4 +1,4 @@
-@use "../variables/variables";
+@use '../variables/variables';
 @use '@angular/material' as mat;
 
 :root {
@@ -32,12 +32,16 @@
     box-shadow: var(--box-shadow-lg);
   }
 
-  @include mat.tabs-overrides((active-label-text-color: variables.$primary-color,
+  @include mat.tabs-overrides(
+    (
+      active-label-text-color: variables.$primary-color,
       inactive-hover-label-text-color: variables.$primary-color,
       active-indicator-height: 3px,
       container-height: var(--spacing-xl),
       inactive-focus-label-text-color: variables.$primary-color,
       active-hover-label-text-color: variables.$primary-color,
       active-focus-label-text-color: variables.$primary-color,
-      active-ripple-color: variables.$primary-color));
+      active-ripple-color: variables.$primary-color,
+    )
+  );
 }

@@ -1,5 +1,5 @@
 @use 'sass:map';
 @use '@angular/material' as mat;
-@use "../themes/_orange-theme" as orange-theme;
+@use '../themes/_orange-theme' as orange-theme;
 
 $primary-color: map.get(orange-theme.$primary-palette, 70);

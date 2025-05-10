@@ -1,23 +1,27 @@
-@use "./styles/base/base";
-@use "./styles/variables/variables";
+@use './styles/base/base';
+@use './styles/variables/variables';
 
 // Components
-@use "./styles/components/mat-input.scss";
-@use "./styles/components/mat-tab.scss";
-@use "./styles/components/mat-table.scss";
+@use './styles/components/mat-input.scss';
+@use './styles/components/mat-tab.scss';
+@use './styles/components/mat-table.scss';
 
-@use "./styles/themes/_orange-theme" as orange-theme;
-@use "@angular/material" as mat;
+@use './styles/themes/_orange-theme' as orange-theme;
+@use '@angular/material' as mat;
 @use 'sass:map';
 
 $onPrimaryColor: map.get(orange-theme.$primary-palette, 0);
 
 html {
-  @include mat.theme((color: (primary: orange-theme.$primary-palette,
-        theme-type: light),
+  @include mat.theme(
+    (
+      color: (
+        primary: orange-theme.$primary-palette,
+        theme-type: light,
+      ),
       typography: Roboto,
       density: -4,
-    ), $overrides: (surface:variables.$primary-color,
-      primary: variables.$primary-color,
-      on-primary: $onPrimaryColor));
+    ),
+    $overrides: (surface: variables.$primary-color, primary: variables.$primary-color, on-primary: $onPrimaryColor)
+  );
 }

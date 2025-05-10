@@ -1,4 +1,4 @@
-@use "../variables/variables";
+@use '../variables/variables';
 @use '@angular/material' as mat;
 
 :root {
@@ -18,7 +18,10 @@
     }
   }
 
-  @include mat.table-overrides((background-color: var(--mat-sys-surface-container-lowest),
+  @include mat.table-overrides(
+    (
+      background-color: var(--mat-sys-surface-container-lowest),
       row-item-outline-color: var(--mat-sys-inverse-on-surface),
-    ));
+    )
+  );
 }
