@@ -1,0 +1,16 @@
+services:
+  server:
+    build: .
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_PORT=27017
+      - DB_NAME=employeeDB
+
+  db:
+    image: mongo
+    ports:
+      - '27017:27017'
