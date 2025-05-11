@@ -1,0 +1,53 @@
+<h2 mat-dialog-title>Offboard</h2>
+<mat-dialog-content>
+  <form [formGroup]="form">
+    <div class="d-flex flex-column">
+      <mat-form-field>
+        <mat-label>Receiver</mat-label>
+        <input matInput formControlName="receiver" />
+        <mat-error>{{ getControlError(form.controls.receiver) }}</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+        <mat-error>{{ getControlError(form.controls.email) }}</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Phone</mat-label>
+        <input matInput formControlName="phone" />
+        <mat-error>{{ getControlError(form.controls.phone) }}</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Street line</mat-label>
+        <input matInput formControlName="streetLine" />
+        <mat-error>{{ getControlError(form.controls.streetLine) }}</mat-error>
+      </mat-form-field>
+      <div class="d-flex row">
+        <mat-form-field>
+          <mat-label>City</mat-label>
+          <input matInput formControlName="city" />
+          <mat-error>{{ getControlError(form.controls.city) }}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Postal Code</mat-label>
+          <input matInput formControlName="postalCode" />
+          <mat-error>{{ getControlError(form.controls.postalCode) }}</mat-error>
+        </mat-form-field>
+      </div>
+      <mat-form-field>
+        <mat-label>Country</mat-label>
+        <input matInput formControlName="country" />
+        <mat-error>{{ getControlError(form.controls.country) }}</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Notes</mat-label>
+        <textarea matInput formControlName="notes"></textarea>
+        <mat-error>{{ getControlError(form.controls.notes) }}</mat-error>
+      </mat-form-field>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="cancel()" class="me-auto">Cancel</button>
+  <button mat-flat-button (click)="submit()" cdkFocusInitial>Confirm</button>
+</mat-dialog-actions>

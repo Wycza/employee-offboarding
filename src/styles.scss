@@ -2,6 +2,7 @@
 @use './styles/variables/variables';
 
 // Components
+@use './styles/components/mat-dialog.scss';
 @use './styles/components/mat-input.scss';
 @use './styles/components/mat-tab.scss';
 @use './styles/components/mat-table.scss';

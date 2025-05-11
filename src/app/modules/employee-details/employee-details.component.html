@@ -4,7 +4,7 @@
   <h2>{{ employeeDetails.name }}</h2>
 
   @if (employeeDetails.status !== StatusType.Offboarded) {
-    <button mat-flat-button>Offboard</button>
+    <button mat-flat-button (click)="startOffboarding()">Offboard</button>
   }
 </div>
 

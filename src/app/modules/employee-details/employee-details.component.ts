@@ -4,6 +4,7 @@ import { MatTableModule } from '@angular/material/table';
 import { ActivatedRoute } from '@angular/router';
 import { Employee } from '@app/core/api/employees/employees.model';
 import { StatusType } from '@app/core/enums/status.enum';
+import { EmployeesService } from '@app/core/services/employees/employees.service';
 import { BackButtonComponent } from '@app/shared/components/back-button/back-button.component';
 
 @Component({
@@ -15,6 +16,8 @@ import { BackButtonComponent } from '@app/shared/components/back-button/back-but
 })
 export class EmployeeDetailsComponent {
   private readonly activatedRoute = inject(ActivatedRoute);
+  private readonly employeesService = inject(EmployeesService);
+
   protected readonly employeeDetails: Employee;
   protected readonly displayedColumns = ['item'];
   protected readonly dataSource: string[] = [];
@@ -23,5 +26,9 @@ export class EmployeeDetailsComponent {
   constructor() {
     this.employeeDetails = this.activatedRoute.snapshot.data['employee'];
     this.dataSource = this.employeeDetails.equipments.map(eq => eq.name);
+  }
+
+  startOffboarding(): void {
+    this.employeesService.openOffboardDialog(this.employeeDetails.id);
   }
 }

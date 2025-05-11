@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Employee } from '@app/core/api/employees/employees.model';
 import { DepartmentType } from '@app/core/enums/department.enum';
 import { StatusType } from '@app/core/enums/status.enum';
+import { EmployeesService } from '@app/core/services/employees/employees.service';
 
 describe(EmployeeDetailsComponent.name, () => {
   let component: EmployeeDetailsComponent;
@@ -25,7 +26,11 @@ describe(EmployeeDetailsComponent.name, () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [EmployeeDetailsComponent],
-      providers: [...BaseTestBedConfigModule.providers, { provide: ActivatedRoute, useValue: activatedRouteMock }],
+      providers: [
+        ...BaseTestBedConfigModule.providers,
+        { provide: ActivatedRoute, useValue: activatedRouteMock },
+        { provide: EmployeesService, useValue: {} },
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(EmployeeDetailsComponent);

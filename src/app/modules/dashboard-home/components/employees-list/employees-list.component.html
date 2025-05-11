@@ -43,7 +43,7 @@
           </a>
           <button
             mat-menu-item
-            (click)="startOffboarding(element)"
+            (click)="startOffboarding(element.id)"
             [disabled]="element.status === StatusType.Offboarded">
             <mat-icon>door_front</mat-icon>
             <span> Offboard </span>
