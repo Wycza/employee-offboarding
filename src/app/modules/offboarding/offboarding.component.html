@@ -1,1 +1,65 @@
-<p>offboarding works!</p>
+<h1>Employee Offboarding app</h1>
+
+<p>
+  Objective: Develop an Employee Offboarding system using Angular and Google Material Design components. The application
+  should manage the offboarding process of employees, including their personal information, exit interview details, and
+  task checklist.
+</p>
+
+<h2>Tasks completed</h2>
+
+<h4>Main Dashboard:</h4>
+<ul>
+  <li>Display a list of employees</li>
+  <li>Include a search bar to filter employees by name or department. It should be done on frontend</li>
+</ul>
+
+<h4>Employee Details Page:</h4>
+<ul>
+  <li>Display detailed information about the employee (e.g., name, department, email, equipment table).</li>
+</ul>
+
+<h4>Offboard action:</h4>
+<ul>
+  <li>
+    From the detailed page user should be able to “offboard” employees. The user should provide equipment offboarding
+    details(employee address, optional notes, email, phone)
+  </li>
+  <li>
+    After confirming the action, the user should be displayed on the main list with OFFBOARDED state without site
+    reloading, This requirement should demonstrate your state management skill. Besides that, FE should make an
+    /offboard call to the backend.
+  </li>
+  <li>Use forms with proper validation.</li>
+</ul>
+
+<h2>Extra things done but not mentioned in the description</h2>
+<ul>
+  <li>Own material theme</li>
+  <li>Eslint</li>
+  <li>Prettier</li>
+  <li>Path imports</li>
+  <li>Stylelint</li>
+  <li>Table sorting</li>
+  <li>Custom title service</li>
+  <li>Zoneless</li>
+  <li>Mocked backend in NestJS + Docker</li>
+</ul>
+
+<h2>Below you can find a list of things, that could be added/improved</h2>
+<ul>
+  <li>404 page</li>
+  <li>Loading spinner</li>
+  <li>Empty table indicator</li>
+  <li>e2e tests</li>
+  <li>Improved validation (e.g. postal code validation) or even better, create postalCode input component</li>
+  <li>Improved error handling (generic solution)</li>
+  <li>Sorting of the equipment column</li>
+  <li>Improved RWD</li>
+</ul>
+
+<p>
+  Note: The purpose of this task was mainly about frontend (Angular). Backend could be improved but it wasn't the
+  subject of this task. The biggest challange of this task was to include search input as a part of the mat-tabs wrapper
+  component.
+</p>
